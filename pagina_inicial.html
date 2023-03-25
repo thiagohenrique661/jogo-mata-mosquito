@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>JOGO MATA MOSQUITO</title>
+
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script >
+		
+		
+		function iniciarJogo() {
+        var nivel = document.getElementById('nivel').value
+
+        if(nivel === '') {
+          alert('Selecione um nível para iniciar o jogo')
+          return false
+        }
+        window.location.href = "index.html?" + nivel;
+
+      }
+
+	</script>
+
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col ">
+				<div class="d-flex justify-content-center">
+					<img src="imagens/game.png">
+					
+				</div>
+				
+			</div>
+
+
+		</div>
+
+		<div class="row">
+			<div class="col ">
+				<div class="d-flex justify-content-center">
+					<div class="mb-2">
+						
+					<select class="form-control" id="nivel">
+						<option value="" class="btn btn-dark bg dark">-- Selecione o nível de jogo --</option>
+						<option value="normal" class="text-center btn btn-dark">&laquo; NORMAL &raquo; </option>
+						<option value="dificil" class="text-center btn btn-dark" >&laquo; DIFÍCIL &raquo;</option>
+						<option value="lenda" class="text-center btn btn-dark ">&laquo; LENDA &raquo;</option>
+					</select>
+					</div>
+					
+				</div>
+				
+			</div>
+
+
+		</div>
+
+		<div class="row">
+			<div class="col ">
+				<div class="d-flex justify-content-center">
+					<button type="button" class="btn btn-info btn-lg" onclick="iniciarJogo()">Iniciar jogo</button>
+					
+				</div>
+				
+			</div>
+
+
+		</div>
+		
+	</div>
+
+
+</body>
+</html>
